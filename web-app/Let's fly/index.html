@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Let's Fly Philanthropy – Online Counselling Services India</title>
+  <meta name="description"
+    content="Let's Fly Philanthropy offers professional online counselling services in India. Safe, confidential, affordable mental health support. Book your session today." />
+  <meta name="keywords"
+    content="online counselling India, mental health support, therapy, relationship counselling, anxiety support, emotional healing" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/jpeg" href="assets/images/logo.jpeg">
+
+  <!-- Link externalized style sheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-brand">Let's Fly Philanthropy</div>
+    <div class="nav-links">
+      <a onclick="goTo('about')">About</a>
+      <a onclick="goTo('services')">Services</a>
+      <a onclick="goTo('pricing')">Pricing</a>
+      <a onclick="goTo('testimonials')">Reviews</a>
+      <a onclick="goTo('payment')">Payment</a>
+      <a onclick="goTo('faq')">FAQ</a>
+      <a onclick="openBookingModal('General Navigation Link')" class="btn-teal"
+        style="padding:9px 20px;font-size:14px;cursor:pointer;">Book a Session</a>
+    </div>
+    <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.add('open')"
+      aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE DRAWER MENU -->
+  <div class="mobile-menu">
+    <button class="mobile-close" onclick="document.querySelector('.mobile-menu').classList.remove('open')">✕</button>
+    <a onclick="goTo('about');closeMobile()">About</a>
+    <a onclick="goTo('services');closeMobile()">Services</a>
+    <a onclick="goTo('pricing');closeMobile()">Pricing</a>
+    <a onclick="goTo('testimonials');closeMobile()">Reviews</a>
+    <a onclick="goTo('payment');closeMobile()">Payment</a>
+    <a onclick="goTo('faq');closeMobile()">FAQ</a>
+    <a onclick="openBookingModal('Mobile Menu Link');closeMobile()" class="btn-teal" style="cursor:pointer;">Book a
+      Session</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="logo-wrap">
+      <!-- Replaced heavy base64 inline brand image with relative resource reference -->
+      <img src="assets/images/logo.jpeg" class="logo-img" alt="Let's Fly Philanthropy Logo">
+    </div>
+    <p class="brand-name">Let's Fly Philanthropy</p>
+    <h1 class="hero-tagline">Your Safe Space to Heal, Grow, and Thrive</h1>
+    <div class="kural-block">
+      <div class="kural-line">வறியார்க்கொன்று ஈவதே ஈகைமற் றெல்லாம்</div>
+      <div class="kural-line">குறியெதிர்ப்பை நீர துடைத்து<span class="kural-ref">— குறள் 221</span></div>
+      <div class="kural-meaning">Meaning: "Giving to the poor alone is true charity; all other giving is done with an
+        expectation of return."</div>
+    </div>
+    <div class="hero-btns">
+      <a onclick="openBookingModal('Hero Link')" class="btn-teal" style="cursor:pointer;">Book a Session</a>
+      <a href="https://wa.me/916379427112" class="btn-gold" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>A Space Where You Truly Belong</h2>
+          <p>At Let's Fly Philanthropy, we believe that everyone deserves a safe, compassionate space to heal. Whether
+            you're navigating stress, relationship challenges, or emotional pain — we're here, without judgment.</p>
+          <p>Our counsellors bring warmth, professionalism, and lived understanding to every session. What you share
+            stays here. Your healing journey is yours — private, respected, and fully supported.</p>
+          <div class="pills">
+            <span class="pill">Non-judgmental</span>
+            <span class="pill">100% Confidential</span>
+            <span class="pill">Online &amp; Flexible</span>
+            <span class="pill">Affordable</span>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="emoji">🕊️</div>
+          <h3>You are not alone</h3>
+          <p>Thousands have found clarity and comfort through professional counselling. Taking the first step takes
+            courage — and we'll be right here when you do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why">
+    <div class="container">
+      <h2 class="section-title">Why Choose Us</h2>
+      <div class="divider"></div>
+      <div class="why-content">
+        <p>We begin by understanding your needs through scientifically validated assessment scales. With a friendly and
+          empathetic approach, we ensure you feel comfortable and heard. Based on the results, we provide personalized
+          consultation and carefully plan therapy sessions tailored to support your well-being.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-sub">Comprehensive mental health support, tailored to every stage of your journey</p>
+      <div class="divider"></div>
+
+      <!-- Core counselling cards -->
+      <div class="services-main-grid">
+        <div class="service-card">
+          <div class="service-icon">🧠</div>
+          <h3>Personality Assessment</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌿</div>
+          <h3>Individual Counselling</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">👨‍👩‍👧</div>
+          <h3>Family Counselling</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💑</div>
+          <h3>Marital / Couple Counselling</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛡️</div>
+          <h3>Suicide Prevention Support</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🆘</div>
+          <h3>Emergency Emotional Support</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💔</div>
+          <h3>Handling Sudden Traumatic Events</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🌊</div>
+          <h3>Stress Management &amp; Relaxation Techniques</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎨</div>
+          <h3>Expressive Art Therapy for Student Wellbeing</h3>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔄</div>
+          <h3>Addiction Assessment &amp; Intervention</h3>
+        </div>
+      </div>
+
+      <!-- Psychoeducation + Research -->
+      <div class="services-extra">
+        <div class="services-extra-card">
+          <div class="svc-cat-header">
+            <div class="svc-cat-icon">📚</div>
+            <h3 class="svc-cat-title">Psychoeducation</h3>
+          </div>
+          <ul class="svc-list">
+            <li>Educating clients and families about mental health conditions</li>
+            <li>Teaching coping strategies and stress management</li>
+            <li>Building awareness around emotional well-being</li>
+            <li>Normalising help-seeking behaviour in society</li>
+          </ul>
+        </div>
+        <div class="services-extra-card">
+          <div class="svc-cat-header">
+            <div class="svc-cat-icon">🔬</div>
+            <h3 class="svc-cat-title">Research &amp; Program Development</h3>
+          </div>
+          <ul class="svc-list">
+            <li>Conducting research in psychology</li>
+            <li>Designing evidence-based mental health programs</li>
+            <li>Developing community outreach initiatives</li>
+            <li>Evaluating therapeutic outcomes for continuous improvement</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="services-cta">
+        <a onclick="openBookingModal('Services CTA')" class="btn-teal" style="cursor:pointer;">Book Your Session</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="container">
+      <h2 class="section-title">Simple, Transparent Pricing</h2>
+      <p class="section-sub">No hidden fees. No surprises. Just healing.</p>
+      <div class="divider"></div>
+      <div class="pricing-wrap">
+        <div class="pricing-card">
+          <span class="pricing-badge">Most Popular</span>
+          <div class="pricing-name">Basic Plan</div>
+          <div class="pricing-price"><sup>₹</sup>500</div>
+          <p class="pricing-sub">Per Session</p>
+          <ul class="pricing-features">
+            <li>1 Online Counselling Session</li>
+            <li>Available in English &amp; Tamil</li>
+            <li>Voice Call &amp; Chat sessions</li>
+            <li>WhatsApp check-ins between sessions</li>
+            <li>Additional sessions at extra charge</li>
+          </ul>
+          <a onclick="openBookingModal('Pricing Card Link')" class="btn-teal"
+            style="width:100%;text-align:center;display:block;cursor:pointer;">Start Your Healing Journey</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="container">
+      <h2 class="section-title">Stories of Healing</h2>
+      <p class="section-sub">Real people. Real journeys.</p>
+      <div class="divider"></div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Talking here made me feel truly heard and understood. I learned things about myself I never
+            expected. It really helped me grow as a person."</blockquote>
+          <div class="testi-name">— Raghul</div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Very professional and supportive environment. After just a few sessions, I gained tremendous
+            clarity and confidence in how I approach life."</blockquote>
+          <div class="testi-name">— Vijay</div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"These sessions helped us reconnect and understand each other so much better. We communicate
+            differently now. Truly grateful for this service."</blockquote>
+          <div class="testi-name">— A Couple</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY -->
+  <section id="privacy">
+    <div class="container">
+      <h2 class="section-title">Your Privacy Matters</h2>
+      <p class="section-sub">We are deeply committed to keeping your journey safe and secure</p>
+      <div class="privacy-grid">
+        <div class="privacy-item">
+          <div class="privacy-icon">🔐</div>
+          <h3>Confidential Sessions</h3>
+          <p>What you share never leaves the session. Complete privacy, always.</p>
+        </div>
+        <div class="privacy-item">
+          <div class="privacy-icon">📱</div>
+          <h3>Secure Communication</h3>
+          <p>All sessions happen over encrypted, secure platforms you can trust.</p>
+        </div>
+        <div class="privacy-item">
+          <div class="privacy-icon">🕊️</div>
+          <h3>Judgment-Free Zone</h3>
+          <p>No labels. No shame. Just an open, compassionate space for your truth.</p>
+        </div>
+      </div>
+      <div class="privacy-cta"><a onclick="openBookingModal('Privacy Link')" class="btn-gold"
+          style="cursor:pointer;">Begin Your Journey</a></div>
+    </div>
+  </section>
+
+  <!-- PAYMENT SECTION -->
+  <section id="payment">
+    <div class="container">
+      <h2 class="section-title">Simple &amp; Secure Payment</h2>
+      <p class="section-sub">Follow these instructions to activate your booking</p>
+      <div class="divider"></div>
+
+      <div class="payment-grid">
+        <div class="payment-qr-card">
+          <div class="qr-container">
+            <!-- ==================================================
+                 UPI QR CODE IMAGE CONFIGURATION
+                 1. Place your actual UPI QR code image under 'assets/images/qr_code.png'.
+                 2. Make sure the file type matches (PNG or JPEG).
+                 ================================================== -->
+            <img src="assets/images/qr_code.png" alt="UPI QR Code for Payment" class="qr-img">
+            <div class="qr-glow"></div>
+          </div>
+          <p class="qr-label">Scan with GPay, PhonePe, Paytm or BHIM</p>
+        </div>
+
+        <div class="payment-instructions">
+          <div class="instruction-step">
+            <div class="step-num">1</div>
+            <div class="step-text">
+              <h4>Scan the QR Code</h4>
+              <p>Use your preferred UPI app to scan the QR code on the left, or pay directly to the business UPI ID
+                shown on your scanner.</p>
+            </div>
+          </div>
+
+          <div class="instruction-step">
+            <div class="step-num">2</div>
+            <div class="step-text">
+              <h4>Enter Session Amount</h4>
+              <p>Enter the session fee (<strong>₹500</strong> for the Basic Plan, per session).</p>
+            </div>
+          </div>
+
+          <div class="instruction-step">
+            <div class="step-num">3</div>
+            <div class="step-text">
+              <h4>Share Confirmation Screenshot</h4>
+              <p>Take a screenshot of the successful transaction confirmation screen and click the button below to
+                verify on WhatsApp.</p>
+            </div>
+          </div>
+
+          <div class="payment-actions">
+            <!-- ==================================================
+                 WHATSAPP PHONE NUMBER CONFIGURATION
+                 1. Replace '918124457175' with your country code & WhatsApp number.
+                 2. You can edit the text query parameter to change the pre-filled message.
+                 ================================================== -->
+            <a href="https://wa.me/918124457175?text=Hi!%20I%20have%20completed%20the%20Google%20Form%20and%20payment%20for%20my%20session.%20Here%20is%20my%20screenshot."
+              target="_blank" rel="noopener" class="btn-whatsapp-confirm">
+              <svg viewBox="0 0 24 24" width="20" height="20" class="wa-btn-icon">
+                <path fill="currentColor"
+                  d="M12.01 2.01C6.48 2.01 2 6.48 2 12.01c0 1.77.46 3.49 1.34 5.01L2 22l5.12-1.34c1.47.8 3.12 1.23 4.88 1.23 5.53 0 10.01-4.48 10.01-10.01c0-2.67-1.04-5.18-2.93-7.07c-1.89-1.89-4.4-2.93-7.07-2.93zm0 1.83c2.18 0 4.23.85 5.78 2.39s2.39 3.6 2.39 5.78s-.85 4.23-2.39 5.78s-3.6 2.39-5.78 2.39c-1.47 0-2.9-.38-4.16-1.11l-.3-.17-3.09.81.82-3.01l-.19-.3C4.54 14.88 4.16 13.47 4.16 12.01c0-4.33 3.52-7.85 7.85-7.85zm3.62 10.66c-.2-.1-.1.2-.4.4-.1.1-.3.1-.7-.1c-1.42-.62-2.38-2.18-2.66-2.66-.28-.48-.03-.74.21-.98.22-.22.48-.56.72-.84.24-.28.32-.48.48-.8.16-.32.08-.6-.04-.84-.12-.24-1.08-2.6-1.48-3.56-.38-.92-.78-.8-1.08-.82h-.92c-.32 0-.84.12-1.28.6-.44.48-1.68 1.64-1.68 4s1.72 4.64 1.96 4.96c.24.32 3.38 5.16 8.2 7.24 1.14.5 2.04.8 2.74 1.02 1.15.36 2.2.31 3.03.19.92-.14 2.84-1.16 3.24-2.28.4-1.12.4-2.08.28-2.28-.12-.2-.44-.32-.92-.56z" />
+              </svg>
+              Send Payment Screenshot on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="divider"></div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Are sessions confidential? <span class="faq-arrow">▼</span></div>
+          <div class="faq-a">Absolutely. All sessions are completely private and confidential. Your personal information
+            and what you share will never be disclosed to anyone without your explicit consent.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">How do online sessions work? <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a">After booking, you'll receive confirmation via WhatsApp or email. Sessions are conducted
+            over voice call or chat — whichever you prefer. All you need is your phone and a quiet, private space.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Can I reschedule my session? <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a">Yes! Life happens. You can reschedule your session by contacting us on WhatsApp at least 24
+            hours before your scheduled time, and we'll find a new slot that works for you.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What happens after 8 sessions? <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-a">After completing 8 sessions, you can continue with additional sessions at standard
+            per-session charges. Many clients choose to continue as needed for ongoing support and growth.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-header">
+        <h2>Have Questions? Let's Talk.</h2>
+        <p>Reach out through any channel that's comfortable for you. We're here to help — every step of the way.</p>
+      </div>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-card-icon">📞</div>
+          <h3>Phone</h3>
+          <p>Call us directly for a quick conversation. We're available and ready to help.</p>
+          <a href="tel:8124457175" class="contact-link">Call now</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon">✉️</div>
+          <h3>Email</h3>
+          <p>Send us a message at your pace. We respond thoughtfully within 24 hours.</p>
+          <a href="mailto:thamaraibalamvg@gmail.com" class="contact-link">thamaraibalamvg@gmail.com</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon">💬</div>
+          <h3>WhatsApp</h3>
+          <p>Chat with us instantly on WhatsApp — the fastest way to get started.</p>
+          <a href="https://wa.me/918124457175" class="contact-link" target="_blank" rel="noopener">Start a Chat</a>
+        </div>
+      </div>
+      <div class="contact-bottom">
+        <p>Ready to take the first step toward healing? Book your session now — it only takes a moment.</p>
+        <div class="contact-bottom-btns">
+          <a href="tel:8124457175" class="btn-teal">Call Now</a>
+          <a href="mailto:thamaraibalamvg@gmail.com" class="btn-outline">Send an Email</a>
+          <a href="https://wa.me/918124457175" class="btn-gold" target="_blank" rel="noopener">WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Let's Fly Philanthropy</div>
+          <p class="footer-desc">A compassionate counselling service dedicated to mental health, emotional healing, and
+            personal growth. Online sessions available across India.</p>
+          <p class="footer-loc">📍 Online | India-wide</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a onclick="goTo('about')">About Us</a>
+          <a onclick="goTo('services')">Services</a>
+          <a onclick="goTo('pricing')">Pricing</a>
+          <a onclick="goTo('testimonials')">Testimonials</a>
+          <a onclick="goTo('payment')">Payment</a>
+          <a onclick="goTo('faq')">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="tel:8124457175">📞 8124457175 </a>
+          <a href="https://wa.me/918124457175" target="_blank" rel="noopener">💬 WhatsApp Chat</a>
+          <p
+            style="font-size:13px;color:rgba(255,255,255,0.35);margin-top:16px;font-family:'Playfair Display',serif;font-style:italic;line-height:1.9">
+            Online Counselling India &nbsp;·&nbsp; Mental Health Support &nbsp;·&nbsp; Therapy &amp; Healing</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 Let's Fly Philanthropy Counselling Services. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOATING BUTTON — official icon circle -->
+  <div class="wa-float">
+    <a href="https://wa.me/918124457175" target="_blank" rel="noopener" title="Chat on WhatsApp">
+      <div class="wa-circle">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M24 4C13 4 4 13 4 24c0 3.6.97 7 2.64 9.94L4 44l10.32-2.62A19.9 19.9 0 0 0 24 44c11 0 20-9 20-20S35 4 24 4zm0 36c-3.1 0-6-.8-8.54-2.24l-.6-.36-6.13 1.56 1.6-5.97-.4-.63A15.94 15.94 0 0 1 8 24c0-8.84 7.16-16 16-16s16 7.16 16 16-7.16 16-16 16zm8.74-11.96c-.48-.24-2.84-1.4-3.28-1.56-.44-.16-.76-.24-1.08.24-.32.48-1.24 1.56-1.52 1.88-.28.32-.56.36-1.04.12-.48-.24-2.02-.74-3.84-2.36-1.42-1.26-2.38-2.82-2.66-3.3-.28-.48-.03-.74.21-.98.22-.22.48-.56.72-.84.24-.28.32-.48.48-.8.16-.32.08-.6-.04-.84-.12-.24-1.08-2.6-1.48-3.56-.38-.92-.78-.8-1.08-.82h-.92c-.32 0-.84.12-1.28.6-.44.48-1.68 1.64-1.68 4s1.72 4.64 1.96 4.96c.24.32 3.38 5.16 8.2 7.24 1.14.5 2.04.8 2.74 1.02 1.15.36 2.2.31 3.03.19.92-.14 2.84-1.16 3.24-2.28.4-1.12.4-2.08.28-2.28-.12-.2-.44-.32-.92-.56z" />
+        </svg>
+      </div>
+    </a>
+  </div>
+
+  <!-- BOOKING MODAL – TWO-STEP FLOW -->
+  <div id="booking-modal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeBookingModal()" aria-label="Close modal">✕</button>
+      <div class="modal-header">
+        <h3>Book a Counselling Session</h3>
+        <p>Complete both steps below to book your therapy session</p>
+      </div>
+      <div class="modal-body modal-body-steps">
+
+        <!-- STEP 1 -->
+        <div class="booking-step" id="booking-step-1">
+          <div class="booking-step-header">
+            <span class="booking-step-number">1</span>
+            <h4>Step 1 – Complete the Initial Assessment Form</h4>
+          </div>
+          <p class="booking-step-desc">Completing this form is mandatory before booking a therapy session. It helps our
+            therapists understand your needs before your first session.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSezz9FNChDiFZn3CNi6FY56adKE-Njra5Qkw2p0OGkcwLHOmA/viewform"
+            target="_blank" rel="noopener" class="btn-teal booking-form-btn" id="btn-fill-form">
+            📋 Fill Assessment Form
+          </a>
+          <div class="booking-confirm-wrap">
+            <label class="booking-checkbox-label" for="assessment-confirm">
+              <input type="checkbox" id="assessment-confirm" onchange="toggleBookingStep2()">
+              <span class="custom-checkbox"></span>
+              <span>I have completed the assessment form.</span>
+            </label>
+            <p class="booking-confirm-note">Completing the assessment form helps our therapists understand your needs
+              before your first session.</p>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="booking-step booking-step-locked" id="booking-step-2">
+          <div class="booking-step-header">
+            <span class="booking-step-number">2</span>
+            <h4>Step 2 – Book Your Session</h4>
+          </div>
+          <p class="booking-step-desc">Once you have completed the assessment form, click below to proceed to the
+            payment step and book your session.</p>
+          <button class="btn-gold booking-proceed-btn" id="btn-proceed-payment" disabled onclick="proceedToPayment()">
+            Proceed to Payment & Book Session
+          </button>
+          <p class="booking-lock-msg" id="booking-lock-msg">🔒 Please complete Step 1 first to unlock booking.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Link externalized script file -->
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+@'
+# Ignore local Terraform execution directories
+**/.terraform/
+*.terraform*
+
+# Ignore local state files
+*.tfstate
+*.tfstate.*
+
+# Ignore variable files
+*.tfvars
+*.tfvars.json
+
+# Ignore OS-specific configurations
+.DS_Store
+Thumbs.db
+'@ | Out-File -FilePath .gitignore -Encoding utf8
