@@ -1,17 +1,21 @@
-@'
-# Ignore local Terraform execution directories
+$ignoreContent = @'
+# Block the entire terraform tracking directory and all its subfolders
+.terraform/
+terraform/.terraform/
 **/.terraform/
-*.terraform*
 
-# Ignore local state files
+# Block the lock files and providers
+.terraform.lock.hcl
+**/.terraform.lock.hcl
+*.exe
+
+# Block state logs
 *.tfstate
 *.tfstate.*
 
-# Ignore variable files
+# Block runtime environment variables
 *.tfvars
 *.tfvars.json
+'@
 
-# Ignore OS-specific configurations
-.DS_Store
-Thumbs.db
-'@ | Out-File -FilePath .gitignore -Encoding utf8
+[System.IO.File]::WriteAllText("D:\DevOps-Project-01\.gitignore", $ignoreContent)
