@@ -17,4 +17,4 @@ jobs:
     - name: Build Local Verification Image
       run: |
         echo "Building and verifying container structures..."
-        docker build -t cloudshield-app:latest .
+        docker build -t cloudshield-app:latest -f docker/app.Dockerfile .
