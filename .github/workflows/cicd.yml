@@ -1,0 +1,20 @@
+name: DevOps Production Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository Code
+      uses: actions/checkout@v4
+
+    - name: Set up Docker Buildx
+      uses: actions/??/setup-buildx-action@v3
+
+    - name: Build Local Verification Image
+      run: |
+        echo "Building and verifying container structures..."
+        docker build -t cloudshield-app:latest .
