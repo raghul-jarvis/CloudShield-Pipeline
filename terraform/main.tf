@@ -131,22 +131,18 @@ resource "aws_security_group" "internal_app_security" {
  
 # 8. Public Ingress Edge Proxy Node
 resource "aws_instance" "proxy_node" {
-  ami                    = "ami-007020fd9c84e18c7" # Official Ubuntu 24.04 LTS in ap-south-1 (Mumbai)
+  ami                    = "ami-007020fd9c84e18c77" # Official Ubuntu 24.04 LTS in ap-south-1 (Mumbai)
   instance_type          = "t3.micro"
   subnet_id              = aws_subnet.public_zone.id
   vpc_security_group_ids = [aws_security_group.proxy_security.id]
 
-  # Links the bootstrap setup script to run immediately upon system initialization
-  user_data = file("${path.module}/../scripts/secure-host.sh")
-
-  tags = {
-    Name = "Edge-Proxy-Server"
-  }
+  # Correctly reads the shell script from the parent scripts directory relative to this module
+  user_data              = file("${path.module}/../scripts/secure-host.sh")
 }
 
 # 9. Private Application Runtime Node
 resource "aws_instance" "app_node" {
-  ami                    = "ami-007020fd9c84e18c7" # Official Ubuntu 24.04 LTS in ap-south-1 (Mumbai)
+  ami                    = "ami-007020fd9c84e18c7"
   instance_type          = "t3.micro"
   subnet_id              = aws_subnet.private_zone.id
   vpc_security_group_ids = [aws_security_group.internal_app_security.id]

@@ -21,9 +21,6 @@ FROM nginx:1.25-alpine
 # Strip default generic index directories out of Nginx config
 RUN rm -rf /usr/share/nginx/html/*
 
-# CRITICAL FIX (Line 20): Explicitly handle static code vs framework bundles.
-# If your project uses a build step (dist/), change the source directory to './dist'.
-# If your project is pure HTML/CSS/JS (no build step), leave it as '.' to copy the root directory.
 COPY --from=builder /app/. /usr/share/nginx/html/
 
 EXPOSE 80
